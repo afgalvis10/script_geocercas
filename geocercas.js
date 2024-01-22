@@ -1,11 +1,12 @@
 const fs = require('fs')
 const util = require('util')
 const mysql = require('mysql2/promise')
+require('dotenv').config()
 
 const db_config = {
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'DUoV!m5x8^iT',
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
     database: 'yap_sandbox'
 }
 
